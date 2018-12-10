@@ -112,6 +112,23 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
+        
+        <!-- Import die Spring Social Twitter-Komponenten -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-twitter</artifactId>
+            <version>1.1.2.RELEASE</version>
+        </dependency>
+
+        <!-- Überschreibt die Version von Spring-Web, welche bereits im Spring Boot Starter
+        enthalten ist. Grund ist ein im aktuellen Release nicht gelöster Bug,
+        beschrieben z.B. in https://stackoverflow.com/questions/50853639/twitter-template-fails-during-sending-direct-message-but-get-rate-limit-request -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.0.4.RELEASE</version>
+        </dependency>
+
     </dependencies>
     
     <build>
